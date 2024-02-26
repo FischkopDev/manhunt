@@ -7,5 +7,6 @@ public enum Activities {
     OVERVIEW_GAME,
     OVERVIEW_HUNTER,
     OVERVIEW_RUNNER,
-    WAIT_FOR_SERVER;
+    WAIT_FOR_SERVER,
+    RULES;
 }

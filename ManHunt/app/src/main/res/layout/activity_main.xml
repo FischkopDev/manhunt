@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/roleSpinner"
         android:layout_width="209dp"
         android:layout_height="45dp"
         android:layout_marginStart="100dp"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+        app:layout_constraintTop_toBottomOf="@+id/roleSpinner" />
 
     <TextView
         android:id="@+id/settings"

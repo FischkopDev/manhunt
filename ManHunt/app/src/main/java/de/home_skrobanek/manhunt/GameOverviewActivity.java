@@ -6,8 +6,15 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import de.home_skrobanek.manhunt.backend.manager.Activities;
+import de.home_skrobanek.manhunt.backend.manager.ActivityManager;
 
 public class GameOverviewActivity extends AppCompatActivity {
+
+    private Button startGame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +33,17 @@ public class GameOverviewActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        setUIComponents();
     }
 
-
+    private void setUIComponents(){
+        startGame = findViewById(R.id.startGameButton);
+        startGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ActivityManager.changeActivity(Activities.WAIT_FOR_SERVER, getApplicationContext());
+            }
+        });
+    }
 }
