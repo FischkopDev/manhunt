@@ -1,0 +1,4 @@
+date=15.3.2024
+place=Cafe Botanik
+period=2 Std
+start_time=13Uhr

@@ -82,10 +82,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/player_spinner" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/player_spinner"
         android:layout_width="169dp"
         android:layout_height="29dp"
         android:layout_marginStart="121dp"

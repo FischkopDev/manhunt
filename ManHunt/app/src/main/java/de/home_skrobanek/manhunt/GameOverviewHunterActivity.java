@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 public class GameOverviewHunterActivity extends AppCompatActivity {
 
     private MapView map;
+    private Spinner display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,5 +65,15 @@ public class GameOverviewHunterActivity extends AppCompatActivity {
         mOverlay.setFocusItemsOnTap(true);
 
         map.getOverlays().add(mOverlay);
+
+        setUIComponents();
+    }
+
+    private void setUIComponents(){
+        String[] roles = {"Alle Spieler","Nur Runner", "Nur Hunter"};
+        display = findViewById(R.id.player_spinner);
+        ArrayAdapter ad = new ArrayAdapter(this, android.R.layout.simple_spinner_item, roles);
+        ad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        display.setAdapter(ad);
     }
 }

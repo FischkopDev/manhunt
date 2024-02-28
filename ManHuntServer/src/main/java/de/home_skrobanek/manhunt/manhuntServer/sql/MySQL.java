@@ -108,7 +108,7 @@ public class MySQL {
      */
     public boolean connect() {
         try {
-            con = DriverManager.getConnection("jdbc:mysql://" + HOST + ":"+PORT+"/" + DATABASE + "?tcpKeepAlive=true&autoReconnect="+reconnect, USER, PASSWORD);
+            con = DriverManager.getConnection("jdbc:mysql://" + HOST + ":"+PORT+"/" + DATABASE + "?tcpKeepAlive=true&characterEncoding=latin1&autoReconnect="+reconnect, USER, PASSWORD);
 
             if(!mute) {
                 System.out.println("===========================");
